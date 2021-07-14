@@ -21,59 +21,86 @@ function renderLicenseBadge(license) {
 
     case `unlicense` : return badge = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`;
 
+    case `` : return badge = ``;
+
   }
   
 }
 
 
-// TODO: Create a function that returns the license link
+// Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  let link;
   switch (license) {
 
-    case `mit` : 
+    case `gnuagpl` : link = `https://www.gnu.org/licenses/agpl-3.0` 
+      break;
 
-    case `mozilla` :
+    case `gnugpl` : link = `https://www.gnu.org/licenses/gpl-3.0`
+      break;
 
-    case `apache` :
+    case `gnulgpl` : link = `https://www.gnu.org/licenses/lgpl-3.0`
+      break;
 
-    case `boost` :
+    case `mozilla` : link = `https://opensource.org/licenses/MPL-2.0`
+      break;
 
-    case `unlicense` :
+    case `apache` : link = `https://opensource.org/licenses/Apache-2.0`
+      break;
 
-    case `gnuap` :
+    case `mit` : link = `https://opensource.org/licenses/MIT`
+      break;
 
-    case `gnugp` :
+    case `boost` : link = `https://www.boost.org/LICENSE_1_0.txt`
+      break;
 
-    case `gnulp` :
+    case `unlicense` : link = `http://unlicense.org/`
+      break;
+
+    default : link = ``;
+      break;
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
+  let licenseSection
   switch (license) {
 
-    case `mit` : 
+    case `gnuagpl` : licenseSection = ``
+      break;
 
-    case `mozilla` :
+    case `gnugpl` : licenseSection = ``
+      break;
 
-    case `apache` :
+    case `gnulgpl` : licenseSection = ``
+      break;
 
-    case `boost` :
+    case `mozilla` : licenseSection = ``
+      break;
 
-    case `unlicense` :
+    case `apache` : licenseSection = ``
+      break;
 
-    case `gnuap` :
+    case `mit` : licenseSection = ``
+      break;
 
-    case `gnugp` :
+    case `boost` : licenseSection = ``
+      break;
 
-    case `gnulp` :
+    case `unlicense` : licenseSection = ``
+      break;
+
+    default : licenseSection = ``;
+      break;
+   
   }
 
 }
 
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}\n
   \n
@@ -103,6 +130,11 @@ function generateMarkdown(data) {
   \n
   ${data.credits}\n
   \n
+  ## License\n
+  \n
+  ${data.licenseBadge}\n
+  ${data.licenseSection}\n
+  ${data.licenseLink}\n
   ---\n
   \n
   ## Badges\n
