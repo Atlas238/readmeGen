@@ -2280,6 +2280,9 @@ limitations under the License.`;
 // Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
+  ## Links
+  - [${data.gitRepo} Github Repository]()
   
   ## Description
   ${data.description}
@@ -2305,12 +2308,11 @@ function generateMarkdown(data) {
   ## License
   ${data.licenseLink}
   ${data.licenseSection}
+  
   ---
   
   ## Badges
   ${data.licenseBadge}
-  
-  - ![placeholder]()
   
   ## Features
   ${data.features}

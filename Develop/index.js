@@ -3,7 +3,7 @@ const inquirer = require(`inquirer`);
 const fs = require(`fs`);
 const markdown = require(`./utils/generateMarkdown`)
 
-// TODO: Create an array of questions for user input
+// Create an array of questions for user input
 const questions = [
 
     questionOne = {
@@ -63,7 +63,7 @@ const questions = [
 
 ];
 
-// TODO: Create a function to write README file
+// Create a function to write README file
 function writeToFile(fileName, data) {
 
     fs.writeFile(fileName, data, (err) => {
@@ -77,7 +77,7 @@ function writeToFile(fileName, data) {
 
 
 
-// TODO: Create a function to initialize app
+// Create a function to initialize app
 function init() {
     let dataObj = {}
 
@@ -93,6 +93,7 @@ function init() {
         questions[8],
     ]).then((answers) => {
         dataObj.title = answers.title;
+        dataObj.gitRepo = answers.gitRepo;
         dataObj.description = answers.description;
         dataObj.installation = answers.installation;
         dataObj.usage = answers.usage;
@@ -101,7 +102,6 @@ function init() {
         dataObj.licenseLink = markdown.renderLicenseLink(answers.license);
         dataObj.licenseSection = markdown.renderLicenseSection(answers.license);
         dataObj.features = answers.features;
-        dataObj.contribute = answers.contribute;
         dataObj.tests = answers.tests;
         
         writeToFile(`YourNewREADME.md`, (markdown.generateMarkdown(dataObj)));
