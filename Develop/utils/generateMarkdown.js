@@ -2282,7 +2282,7 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
   ## Links
-  - [${data.gitRepo} Github Repository]()
+  - [Github Repository: ${data.gitRepo}]()
   
   ## Description
   ${data.description}
@@ -2298,7 +2298,6 @@ function generateMarkdown(data) {
   
   ## Usage
   ${data.usage}
-  
   ![Image Placeholder]()
   ![Image Placeholder]()
   
@@ -2306,13 +2305,13 @@ function generateMarkdown(data) {
   ${data.credits}
   
   ## License
-  ${data.licenseLink}
-  ${data.licenseSection}
+  ${renderLicenseSection(data.license)}
+  ${renderLicenseLink(data.license)}
   
   ---
   
   ## Badges
-  ${data.licenseBadge}
+  ${renderLicenseBadge(data.license)}
   
   ## Features
   ${data.features}

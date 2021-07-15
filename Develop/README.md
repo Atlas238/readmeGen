@@ -1,10 +1,12 @@
 # Readme Generator
-This readme was generated in the application
+
   ## Links
-  - [Readme Generator Repository]()
+  - [Github Repository](https://github.com/Atlas238/)
   
   ## Description
-  A command-line application that asks a user nine questions corresponding to sections of the to-be-produced readme file, and depending on user choice a template is generated including user inputs as well as their selected license.
+  A command line appplication that asks a user nine questions corresponding to readme sections. After responding to all of the relevant prompts, user inputs are then injected into a Readme template, as well as the license text, license badge and link corresponding to the selected license.
+  The generated file is then placed into the output folder for clarity.
+  A user can then edit the generated readme with any quick fixes or elaborations they may require.
   
   ## Table of Contents
   - [Installation](#installation)
@@ -13,19 +15,20 @@ This readme was generated in the application
   - [License](#license)
   
   ## Installation
-  npm Inquirer is required and should be designated in the package.json file as a dependancy. Make sure to run npm install after forking this repo.
+  This application requires inquirer and fs - both of which are included in the package.json as dependancies, please run npm install after gathering the necessary files.
   
   ## Usage
-  Streamlines the creation of a professional readme file allowing developers to put more of their time into developing the formal project.
+  User runs the application by calling node readmeGen.js
+  User responds to questions and selects their license
+  File is generated to output for user edits/use
   
   ![Image Placeholder]()
   ![Image Placeholder]()
   
   ## Credits
-  Not applicable
+  Jack Bentsen
   
   ## License
-  http://unlicense.org/
   
         This is free and unencumbered software released into the public domain.
         
@@ -51,18 +54,12 @@ This readme was generated in the application
         OTHER DEALINGS IN THE SOFTWARE.
         
         For more information, please refer to <https://unlicense.org>
+  http://unlicense.org/
+  
   ---
   
   ## Badges
   [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-  
-  - ![placeholder]()
-  
-  ## Features
-  
-  
-  ## How to Contribute
-
   
   ## Tests
   
