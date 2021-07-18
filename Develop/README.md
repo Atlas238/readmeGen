@@ -21,10 +21,7 @@
   User runs the application by calling node readmeGen.js
   User responds to questions and selects their license
   File is generated to output for user edits/use
-  
-  ![Image Placeholder]()
-  ![Image Placeholder]()
-  
+
   ## Credits
   Jack Bentsen
   
