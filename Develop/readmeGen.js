@@ -12,6 +12,11 @@ const questions = [
     },
     {
         type: `input`,
+        name: `gitUsername`,
+        message: `What is your Github Username?`
+    },
+    {
+        type: `input`,
         name: `title`,
         message: `What is the name of your project?`,
     },
@@ -49,7 +54,7 @@ const questions = [
     {
         type: `input`,
         name: `contribute`,
-        message: `If applicable, please detail contribution steps other developers should take`
+        message: `If applicable, please detail contribution steps other developers should take: `
     },
     {
         type: `input`,
