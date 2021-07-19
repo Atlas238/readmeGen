@@ -2281,8 +2281,12 @@ limitations under the License.`;
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ## Badges
+  ${renderLicenseBadge(data.license)}
+
   ## Links
-  - [Github Repository: ${data.gitRepo}]()
+  - [Github Repository: ${data.gitRepo}](https://github.com/${data.gitUsername}/${data.gitRepo})
+  - [Github Profile: ${data.gitUsername}](https://github.com/${data.gitUsername})
   
   ## Description
   ${data.description}
@@ -2309,9 +2313,6 @@ function generateMarkdown(data) {
   ${renderLicenseLink(data.license)}
   
   ---
-  
-  ## Badges
-  ${renderLicenseBadge(data.license)}
   
   ## Features
   ${data.features}
